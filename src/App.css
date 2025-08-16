@@ -1,0 +1,55 @@
+body {
+  background-color: #121212;
+  color: #f8f9fa;
+  overflow-x: hidden;
+}
+.text-info{
+  color: rgb(239, 123, 204) !important;
+}
+.btn-info{
+  background-color: rgb(239, 123, 204) !important; border: pink;
+}
+.btn-info:hover{
+  color: white;
+}
+.nav-item:hover{
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.toggler-icon {
+  width: 25px !important;
+  height: 3px !important;
+  background-color: white !important;
+  margin: 5px 0;
+  transition: 0.4s;
+  display: block;
+}
+
+.navbar-toggler.open .toggler-icon:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler.open .toggler-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.open .toggler-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+#navbarNav{
+  text-align: center;
+}
+/*.navv{
+    align-items: center;
+}
+.navbar-custom {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Bootstrap's default navbar z-index 
+ }*/
