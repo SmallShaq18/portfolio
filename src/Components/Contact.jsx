@@ -11,12 +11,12 @@ export default function Contact() {
       link: "mailto:abdulsamad.m1802472@st.futminna.edu.ng",
       icon: "✉️"
     },
-    /*{
+    {
       type: "LinkedIn",
       value: "Abdulsamad Ibrahim",
       link: "https://linkedin.com/in/abdulsamad-ibrahim-964032237/",
-      icon: "💼𝕏"
-    },*/
+      icon: "💼"
+    },
     {
       type: "X (Formerly Twitter)",
       value: "thesmallShaq___",
@@ -29,12 +29,12 @@ export default function Contact() {
       link: "https://github.com/smallshaq18",
       icon: "🔗"
     },
-    {
+    /*{
       type: "Location",
       value: "Nigeria",
       link: null,
       icon: "📍"
-    }
+    }*/
   ];
 
   const controls = useAnimation();

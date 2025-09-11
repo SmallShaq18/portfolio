@@ -40,11 +40,14 @@ export default function About() {
             style={{ maxWidth: 720, lineHeight: 1.8 }}
             variants={item}
           >
-            I’m a <span className="text-info">Frontend Developer</span> focused on
-            clean, accessible, and responsive web apps. I work with{' '}
-            <span className="text-warning">React</span> and{' '}
-            <span className="text-warning">Bootstrap</span>, turning ideas into
-            polished user experiences.
+            I’m a <span className="text-info">Fullstack Developer</span> who builds
+            clean, user-friendly, functional and responsive web apps. With{' '}
+            <span className="text-warning">React</span>, {' '}
+            <span className="text-warning">Bootstrap</span>, {' '}
+            <span className="text-warning">Node.js</span>, {' '}
+            <span className="text-warning">Express</span> and {' '}
+            <span className="text-warning">MongoDB</span>, I bring ideas to life
+            as polished digital experiences.
           </motion.p>
         </motion.div>
       </div>

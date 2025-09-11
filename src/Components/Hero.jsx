@@ -24,18 +24,20 @@ function Hero() {
         >
           <Typewriter
             words={[
-              "Frontend Developer",
+              "Fullstack Developer",
               "React Enthusiast",
               "Bootstrap Specialist",
+              "Node.js & Express",
+              "MongoDB Expert",
+              "REST API Developer",
               "UI/UX Builder",
-              "Clean Code Advocate",
             ]}
             loop={0} // 0 = infinite
             cursor
             cursorStyle="|"
-            typeSpeed={80}
-            deleteSpeed={50}
-            delaySpeed={1500}
+            typeSpeed={90}
+            deleteSpeed={60}
+            delaySpeed={1200}
           />
         </motion.p>
 
