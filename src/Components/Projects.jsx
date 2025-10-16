@@ -8,6 +8,7 @@ import todo from '../assets/images/todo.png';
 import todoFullstack from '../assets/images/todo-fullstack.png';
 import saffire from '../assets/images/saffire.png';
 import techGadgets from '../assets/images/tech-gadgets.png';
+import blog from '../assets/images/blog.png';
 
 export default function Projects() {
   const projects = [
@@ -65,7 +66,17 @@ export default function Projects() {
       github: "https://github.com/SmallShaq18/todo-list-fullstack",
       live: "https://todo-frontend-part.vercel.app/",
       image: todoFullstack
-    }
+    },
+    {
+      title: "Movie Blog",
+      type: "Full Stack (MERN)",
+      description: "A social-style blog app where users can share posts, drop comments, and bookmark favorites. Built with the MERN stack, featuring image uploads (Cloudinary), JWT auth, and responsive design. Basically my take on a clean, modern content-sharing platform.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "Bootstrap"],
+      github: "https://github.com/smallshaq18/blog-app",
+      live: "https://blog-app-smoky-nu.vercel.app/",
+      image: blog
+    },
+
   ];
 
   const controls = useAnimation();
