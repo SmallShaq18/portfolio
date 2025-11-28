@@ -5,8 +5,8 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Skills() {
   const skills = [
-    'HTML5', 'CSS / SCSS', 'JavaScript (ES6+)',
-    'React', 'Bootstrap', 'Node.js & Express', 'MongoDB',
+    'HTML5', 'CSS / SCSS', 'JavaScript (ES6+)', 'TypeScript',
+    'React', 'Bootstrap', 'Tailwind', 'Node.js & Express', 'MongoDB',
     'REST API', 'Git / GitHub',
     'Responsive Design', 'API Integration',
   ];

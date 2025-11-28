@@ -43,7 +43,9 @@ export default function About() {
             I’m a <span className="text-info">Fullstack Developer</span> who builds
             clean, user-friendly, functional and responsive web apps. With{' '}
             <span className="text-warning">React</span>, {' '}
+            <span className="text-warning">Typescript</span>, {' '}
             <span className="text-warning">Bootstrap</span>, {' '}
+            <span className="text-warning">Tailwind</span>, {' '}
             <span className="text-warning">Node.js</span>, {' '}
             <span className="text-warning">Express</span> and {' '}
             <span className="text-warning">MongoDB</span>, I bring ideas to life

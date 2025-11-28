@@ -9,6 +9,7 @@ import todoFullstack from '../assets/images/todo-fullstack.png';
 import saffire from '../assets/images/saffire.png';
 import techGadgets from '../assets/images/tech-gadgets.png';
 import blog from '../assets/images/blog.png';
+import whosaid from '../assets/images/who-said.png';
 
 export default function Projects() {
   const projects = [
@@ -76,6 +77,16 @@ export default function Projects() {
       live: "https://blog-app-smoky-nu.vercel.app/",
       image: blog
     },
+    {
+      title: "Who Said",
+      type: "Frontend",
+      description: "A fast-paced quote guessing game where players identify who said a line from popular anime and movies. Features include a countdown timer, lifelines, sound effects, animated transitions, themed modes, and dynamic backgrounds. Built to feel smooth, fun, and arcade-like while showcasing clean React + TypeScript architecture.",
+      tech: ["React", "TypeScript", "Tailwind", "Framer Motion", "Vite"],
+      github: "https://github.com/smallshaq18/who-said",
+      live: "https://who-said-omega.vercel.app/",
+      image: whosaid
+    },
+
 
   ];
 
@@ -126,7 +137,7 @@ export default function Projects() {
           animate={controls}
         >
           {projects.map((project, index) => (
-            <motion.div key={index} className="col-md-6 col-lg-6" variants={item}>
+            <motion.div key={index} className="col-md-6 col-lg-4" variants={item}>
               <div className="card bg-dark border-secondary h-100">
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title text-info mb-3">{project.title} ({project.type})</h5>
