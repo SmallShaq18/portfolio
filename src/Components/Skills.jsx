@@ -1,72 +1,80 @@
-// src/components/Skills.jsx
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function Skills() {
   const skills = [
-    'HTML5', 'CSS / SCSS', 'JavaScript (ES6+)', 'TypeScript',
-    'React', 'Bootstrap', 'Tailwind', 'Node.js & Express', 'MongoDB',
-    'REST API', 'Git / GitHub',
-    'Responsive Design', 'API Integration',
+    "HTML5",
+    "CSS / SCSS",
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "React",
+    "Tailwind",
+    "Bootstrap",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "REST APIs",
+    "Git & GitHub",
   ];
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) controls.start('visible');
-    else controls.start('hidden'); // reset on exit
-  }, [inView, controls]);
+  /*const container = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.05 },
+    },
+  };*/
 
   const container = {
-    hidden: { opacity: 1 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
-  };
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
 
   const item = {
-    hidden: { opacity: 0, y: 12 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.35, ease: "easeOut" },
+    },
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section id="skills" className="py-5 bg-dark text-light">
-      <div className="container">
-        <motion.h2
-          className="fw-bold mb-4 text-center"
-          initial={{ opacity: 0, y: -18 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -18 }}
-          transition={{ duration: 0.5 }}
-        >
-          Skills
-        </motion.h2>
+    <section id="skills">
+    <motion.div
+      ref={ref}
+      variants={container}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="relative p-5"
+    >
+      <h3 className="text-xl text-center font-semibold mb-4 text-white">
+        Core Skills
+      </h3>
 
-        <motion.h5
-          className="fw-bold mb-4 text-center"
-          initial={{ opacity: 0, y: -18 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -18 }}
-          transition={{ duration: 0.5 }}
-        >
-          Here are the core technologies and tools I use to design and build responsive, user-friendly applications.
-        </motion.h5>
-
-        <motion.div
-          ref={ref}
-          className="row g-3 justify-content-center"
-          variants={container}
-          initial="hidden"
-          animate={controls}
-        >
-          {skills.map((skill) => (
-            <motion.div key={skill} className="col-6 col-md-3 col-lg-2" variants={item}>
-              <div className="border border-secondary rounded-3 p-3 text-center bg-black">
-                {skill}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {skills.map((skill) => (
+          <motion.div
+            key={skill}
+            variants={item}
+            className="rounded-xl border border-white/10 bg-white/5
+                       px-3 py-5 text-sm text-white/80
+                       hover:border-teal-400/40 hover:text-teal-300
+                       transition-colors"
+          >
+            {skill}
+          </motion.div>
+        ))}
       </div>
+    </motion.div>
     </section>
   );
 }
-
