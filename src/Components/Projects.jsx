@@ -11,6 +11,7 @@ import saffire from '../assets/images/saffire.png';
 import techGadgets from '../assets/images/tech-gadgets.png';
 import blog from '../assets/images/blog.png';
 import whosaid from '../assets/images/who-said.png';
+import portfolio from '../assets/images/portfolio-gen-roast.png';
 
 export default function Projects() {
   const projects = [
@@ -60,15 +61,6 @@ export default function Projects() {
       live: "https://saffire-academy.vercel.app/",
       image: saffire
     },
-    /*{
-      title: "To-Do List App",
-      type: "Fullstack",
-      description: "A fullstack productivity app with user authentication, persistent tasks, and a clean Bootstrap-powered interface. Features signup/login, token-based auth, CRUD operations, and default tasks for new users. Built with the MERN stack to highlight fullstack development skills.",
-      tech: ["React", "Bootstrap", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com/SmallShaq18/todo-list-fullstack",
-      live: "https://todo-frontend-part.vercel.app/",
-      image: todoFullstack
-    },*/
     {
       title: "Movie Blog",
       type: "Full Stack (MERN)",
@@ -87,6 +79,16 @@ export default function Projects() {
       live: "https://who-said-omega.vercel.app/",
       image: whosaid
     },
+    {
+  title: "Portfolio Generator and Code Roaster",
+  type: "Fullstack",
+  description: "A fullstack portfolio builder with live preview, multiple React templates, light/dark mode, and export-to-ZIP functionality. Users can fill bio, skills, projects, and socials, then download a ready-to-run React project. And A humorous code roaster that accepts any pasted code and generates witty roasts via AI. Designed as a fun companion feature for developers to get feedback in a playful way.",
+  tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Vite", "AI"],
+  github: "https://github.com/SmallShaq18/portfolio-generator-and-roaster",
+  live: "https://portfolio-generator-and-roaster.vercel.app/",
+  image: portfolio,
+},
+
 
 
   ];
