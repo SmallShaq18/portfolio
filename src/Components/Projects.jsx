@@ -5,26 +5,16 @@ import { ExternalLink, Github } from "lucide-react";
 import { useInView } from 'react-intersection-observer';
 import movie from '../assets/images/movie.png';
 import recipe from '../assets/images/recipe.png';
-import todo from '../assets/images/todo.png';
-//import todoFullstack from '../assets/images/todo-fullstack.png';
 import saffire from '../assets/images/saffire.png';
 import techGadgets from '../assets/images/tech-gadgets.png';
 import blog from '../assets/images/blog.png';
 import whosaid from '../assets/images/who-said.png';
 import portfolio from '../assets/images/portfolio-gen-roast.png';
+import feedFrenzy from '../assets/images/feed-frenzy.png';
+import designCatalogue from '../assets/images/design-catalogue.png';
 
 export default function Projects() {
   const projects = [
-    
-    {
-      title: "Task Management App",
-      type: "Frontend",
-      description: "A sleek, responsive task management app with a playful-themed UI. Users can add, edit, mark as complete, and delete tasks. Built to highlight clean UI/UX design and state management in React.",
-      tech: ["React", "Bootstrap", "Vite", "LocalStorage"],
-      github: "https://github.com/smallshaq18/todo-list",
-      live: "https://todo-list-mu-nine-65.vercel.app/",
-      image: todo
-    },
     {
       title: "Movie Library",
       type: "Frontend",
@@ -72,7 +62,7 @@ export default function Projects() {
     },
     {
       title: "Who Said",
-      type: "Full Stack",
+      type: "Frontend",
       description: "A fast-paced quote guessing game where players identify who said a line from popular anime and movies. Features include a countdown timer, lifelines, sound effects, animated transitions, themed modes, and dynamic backgrounds. Built to feel smooth, fun, and arcade-like while showcasing clean React + TypeScript architecture.",
       tech: ["React", "TypeScript", "Tailwind", "Framer Motion", "Vite"],
       github: "https://github.com/smallshaq18/who-said",
@@ -87,11 +77,26 @@ export default function Projects() {
   github: "https://github.com/SmallShaq18/portfolio-generator-and-roaster",
   live: "https://portfolio-generator-and-roaster.vercel.app/",
   image: portfolio,
-},
-
-
-
-  ];
+  },
+  {
+  "title": "Feed Frenzy",
+  "type": "Fullstack",
+  "description": "A fullstack news intelligence platform that aggregates articles from multiple sources, extracts meaningful keywords, and detects emerging trends across the media landscape. It scrapes curated RSS feeds on scheduled intervals, analyzes keyword frequency and velocity, and surfaces trending topics through a clean dashboard with infinite scrolling. The system also tracks co-occurring signals and generates insights that can power newsletters or analytics dashboards.",
+  "tech": ["React", "TypeScript", "Node.js", "Express", "MongoDB", "TanStack Query", "RSS", "Cron Jobs"],
+  "github": "https://github.com/SmallShaq18/feed-frenzy",
+  "live": "https://feed-frenzy-one.vercel.app",
+  "image": feedFrenzy
+  },
+  {
+  "title": "SHAQ Design Studio",
+  "type": "Frontend",
+  "description": "A portfolio platform for SHAQ, a graphic design studio based in Nigeria. Features a curated gallery of branding, packaging, illustration, and print work across 21 project groups. Built with an editorial luxury aesthetic — Cormorant Garamond display type, DM Mono labels, warm off-white and near-black palette. Includes project filtering by category, full-screen image lightbox with swipe support, persistent favourites and download tracking via localStorage, and a live favourites badge synced across all components via a custom event bus.",
+  "tech": ["React", "TypeScript", "React Router", "Lucide React", "React Toastify", "Cloudinary CDN"],
+  "github": "https://github.com/SmallShaq18/design-catalogue",
+  "live": "https://design-catalogue.vercel.app",
+  "image": designCatalogue
+  }
+];
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.05 });
@@ -315,23 +320,18 @@ export default function Projects() {
 import { Star } from "lucide-react";
 
 function FeaturedProject() {
+
   const project = {
-    title: "Movie Blog App",
-    type: "Full-Stack (MERN)",
+    title: "SHAQ Design Studio",
+    type: "Frontend",
     description:
-      "A social-style movie blog platform where users can create posts, comment, and bookmark favorites. Built with authentication, image uploads, and a clean, responsive UI; my take on a modern content-sharing experience.",
+      "A portfolio platform for SHAQ, a graphic design studio based in Nigeria. Features a curated gallery of branding, packaging, illustration, and print work across 21 project groups. Built with an editorial luxury aesthetic — Cormorant Garamond display type, DM Mono labels, warm off-white and near-black palette. Includes project filtering by category, full-screen image lightbox with swipe support, persistent favourites and download tracking via localStorage, and a live favourites badge synced across all components via a custom event bus.",
     tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Cloudinary",
-      "JWT Auth",
-      "Bootstrap",
+      "React", "TypeScript", "React Router", "Lucide React", "React Toastify", "Cloudinary CDN"
     ],
-    image: blog,
-    live: "https://blog-app-smoky-nu.vercel.app/",
-    github: "https://github.com/smallshaq18/blog-app",
+    image: designCatalogue,
+    live: "https://design-catalogue.vercel.app",
+    github: "https://github.com/SmallShaq18/design-catalogue",
   };
 
   return (
