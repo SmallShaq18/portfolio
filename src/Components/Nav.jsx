@@ -5,6 +5,7 @@ import {
   faFolderOpen,
   faEnvelope,
   faTools,
+  faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -17,6 +18,7 @@ export default function Nav() {
     { to: "about", icon: faUser, label: "About" },
     { to: "skills", icon: faTools, label: "Skills" },
     { to: "projects", icon: faFolderOpen, label: "Projects" },
+    { to: "resume", icon: faDownload, label: "Resume" },
     { to: "contact", icon: faEnvelope, label: "Contact" },
   ];
 
